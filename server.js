@@ -55,7 +55,7 @@ var HtmlTemplate = `<html>
         </div>
     </body>
 </html>`;
-
+return HtmlTemplate;
 }
 
 app.get('/', function (req, res) {
