@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    'article-one' : {
+    articleone : {
     
     title:'Article-One | Piyush Satyam',
     heading:'Article-One',
@@ -21,7 +21,7 @@ var articles = {
                 This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.This is the Content for my first article.
             </p>`
 },
-    'article-two' : {
+    articletwo : {
         
         title:'Article-Two | Piyush Satyam',
         heading:'Article-Two',
@@ -36,7 +36,7 @@ var articles = {
                 This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.This is the Content for my second article.
             </p>`
     },
-    'article-three' : {
+    articlethree : {
         title:'Article-Three| Piyush Satyam',
         heading:'Article-Three',
         date:'November 15,2017',
@@ -93,8 +93,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function(req,res) {
-        res.send(createTemplate(articles[articleName])) ; 
+app.get('/article-one', function(req,res) {
+        res.send(createTemplate(articleone)) ; 
 });
 
 app.get('/article-two', function(req,res) {
