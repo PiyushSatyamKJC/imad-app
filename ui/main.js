@@ -20,6 +20,6 @@ button.onclick=function() {
   };
   
   //Make the request
-  request.open('GET','http://satyampiyush16jan1987.imad.hasura-app.io/counter',true);
-  request.send(counter);
+  request.open('GET','https://satyampiyush16jan1987.imad.hasura-app.io/counter',true);
+  request.send(null);
 };
