@@ -32,6 +32,7 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function() {
+    var request = new XMLHttpRequest();
   //Capture the response and store it in a variable
   
   request.onreadystatechange=function() {
